@@ -1,14 +1,14 @@
 module "dockeree-cluster" {
   source                  = "modules/docker_cluster"
 
-  environment             = "lab"
+  environment             = "test"
   vsphere_server          = "10.254.252.5"
   vsphere_datacenter      = "POC-Lab"
   vsphere_datastore       = "IGNW-POC"
   vsphere_compute_cluster = "POC"
   vsphere_network         = "ignw-poc|vesta-devops|servers"
-  vsphere_folder          = "docker-ee"
-  vm_template           = "ubuntu1604_dockeree_template"
+  vsphere_folder          = "dockeree-test"
+  vm_template             = "ubuntu1604_dockeree_template"
   domain                  = "ignw.io"
   manager_node_count      = "2"
   worker_node_count       = "1"
